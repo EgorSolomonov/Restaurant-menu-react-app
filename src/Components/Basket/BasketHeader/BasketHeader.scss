@@ -1,0 +1,48 @@
+@import "../../../App.scss";
+
+.basket-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+
+  a {
+    text-decoration: none;
+  }
+
+  .basket-header__back-button {
+    p {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 26px;
+      border: 1px solid white;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      span {
+        width: 24px;
+        height: 1px;
+        margin-bottom: 35px;
+      }
+
+      &:hover {
+        border-color: $second-color;
+
+        span {
+          color: $second-color;
+        }
+      }
+    }
+  }
+
+  .basket-header__title {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 31px;
+    line-height: 38px;
+  }
+}

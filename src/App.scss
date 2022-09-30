@@ -1,0 +1,39 @@
+* {
+  font-family: "Montserrat";
+  color: white;
+  background-color: #161516;
+}
+
+$first-color: white;
+$second-color: #d58c51;
+
+.App {
+  header {
+    padding: 55px 70px 80px 70px;
+  }
+
+  // .menu-main-wrapper {
+  //   height: calc(100vh - 215px);
+  // }
+
+  .basket-main-wrapper {
+    height: calc(100vh - 306px);
+    overflow: auto;
+  }
+
+  .basket-main-wrapper::-webkit-scrollbar {
+    width: 10px;
+    background-color: #161516;
+  }
+
+  .basket-main-wrapper::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: $second-color;
+  }
+
+  .basket-main-wrapper::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color:  #161516;
+  }
+}

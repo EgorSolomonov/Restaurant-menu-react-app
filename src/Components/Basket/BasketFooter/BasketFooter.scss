@@ -1,0 +1,52 @@
+@import "../../../App.scss";
+
+.basket-footer {
+  display: flex;
+
+  height: 90px;
+  border-top: 1px solid $second-color;
+
+  .basket-footer__order-data {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+
+    .basket-footer__price-info {
+      display: flex;
+      align-items: center;
+
+      gap: 15px;
+
+      h2 {
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 26px;
+      }
+
+      p {
+        color: $second-color;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+
+    .basket-footer__order-button {
+      display: flex;
+      gap: 10px;
+
+      span {
+        padding: 12px 40px;
+        text-decoration: none;
+        color: black;
+        background-color: $second-color;
+        cursor: pointer;
+
+        &:first-child {
+          background-color: $first-color;
+        }
+      }
+    }
+  }
+}
