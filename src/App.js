@@ -11,7 +11,7 @@ const App = () => {
   const priceValue = [];
 
   price?.forEach((item) => {
-    if (item.price.includes(" "))
+    if (item.price?.includes(" "))
       priceValue.push(+item.price.split(" ").join(""));
     else priceValue.push(+item.price);
   });
