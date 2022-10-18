@@ -44,7 +44,7 @@ export const basketSlice = createSlice({
       let savedBasketArr = JSON.parse(localStorage.getItem("savedBasket"));
 
       const priceValue = [];
-      if (!action.payload)
+      if (!action?.payload)
         state.basket.forEach((item) => {
           if (item.price.includes(" "))
             priceValue.push(+item.price.split(" ").join(""));
