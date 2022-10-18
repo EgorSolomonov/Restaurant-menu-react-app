@@ -1,29 +1,29 @@
 {
   "files": {
     "main.css": "/Restaurant-menu-react-app/static/css/main.471d1b45.css",
-    "main.js": "/Restaurant-menu-react-app/static/js/main.f3df8ed0.js",
+    "main.js": "/Restaurant-menu-react-app/static/js/main.0ddf285f.js",
     "static/css/318.335e09d9.chunk.css": "/Restaurant-menu-react-app/static/css/318.335e09d9.chunk.css",
     "static/js/318.30898556.chunk.js": "/Restaurant-menu-react-app/static/js/318.30898556.chunk.js",
     "static/css/292.f904fc4b.chunk.css": "/Restaurant-menu-react-app/static/css/292.f904fc4b.chunk.css",
     "static/js/292.18af2e46.chunk.js": "/Restaurant-menu-react-app/static/js/292.18af2e46.chunk.js",
     "static/css/668.6041e61c.chunk.css": "/Restaurant-menu-react-app/static/css/668.6041e61c.chunk.css",
-    "static/js/668.f6aec6c4.chunk.js": "/Restaurant-menu-react-app/static/js/668.f6aec6c4.chunk.js",
+    "static/js/668.42421236.chunk.js": "/Restaurant-menu-react-app/static/js/668.42421236.chunk.js",
     "static/media/Mask Group.png": "/Restaurant-menu-react-app/static/media/Mask Group.3c2663373ad5414c76d7.png",
     "static/media/image 1.png": "/Restaurant-menu-react-app/static/media/image 1.e4f1acdd56451cdd6b81.png",
     "static/media/Vector.svg": "/Restaurant-menu-react-app/static/media/Vector.5e485d281816b03562c0b45af5564b1b.svg",
     "index.html": "/Restaurant-menu-react-app/index.html",
     "static/media/checkbox.svg": "/Restaurant-menu-react-app/static/media/checkbox.1c7b86376aa734749a05.svg",
     "main.471d1b45.css.map": "/Restaurant-menu-react-app/static/css/main.471d1b45.css.map",
-    "main.f3df8ed0.js.map": "/Restaurant-menu-react-app/static/js/main.f3df8ed0.js.map",
+    "main.0ddf285f.js.map": "/Restaurant-menu-react-app/static/js/main.0ddf285f.js.map",
     "318.335e09d9.chunk.css.map": "/Restaurant-menu-react-app/static/css/318.335e09d9.chunk.css.map",
     "318.30898556.chunk.js.map": "/Restaurant-menu-react-app/static/js/318.30898556.chunk.js.map",
     "292.f904fc4b.chunk.css.map": "/Restaurant-menu-react-app/static/css/292.f904fc4b.chunk.css.map",
     "292.18af2e46.chunk.js.map": "/Restaurant-menu-react-app/static/js/292.18af2e46.chunk.js.map",
     "668.6041e61c.chunk.css.map": "/Restaurant-menu-react-app/static/css/668.6041e61c.chunk.css.map",
-    "668.f6aec6c4.chunk.js.map": "/Restaurant-menu-react-app/static/js/668.f6aec6c4.chunk.js.map"
+    "668.42421236.chunk.js.map": "/Restaurant-menu-react-app/static/js/668.42421236.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.471d1b45.css",
-    "static/js/main.f3df8ed0.js"
+    "static/js/main.0ddf285f.js"
   ]
 }
