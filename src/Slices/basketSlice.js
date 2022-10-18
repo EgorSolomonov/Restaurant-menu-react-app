@@ -44,15 +44,16 @@ export const basketSlice = createSlice({
       let savedBasketArr = JSON.parse(localStorage.getItem("savedBasket"));
 
       const priceValue = [];
-      if (!action?.payload)
-        state.basket.forEach((item) => {
+
+      if (!action.payload)
+        state.basket?.forEach((item) => {
           if (item.price.includes(" "))
             priceValue.push(+item.price.split(" ").join(""));
           else priceValue.push(+item.price);
 
           state.price = priceValue.reduce((acc, item) => acc + item, 0);
         }, 0);
-      else
+      else if (savedBasketArr) {
         for (let userBasket of savedBasketArr) {
           if (userBasket.userEmail === action.payload) {
             userBasket.basket.forEach((item) => {
@@ -64,6 +65,7 @@ export const basketSlice = createSlice({
             }, 0);
           }
         }
+      }
     },
 
     minusPrice: (state, action) => {
