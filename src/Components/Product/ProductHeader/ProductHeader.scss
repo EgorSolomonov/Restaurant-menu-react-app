@@ -1,0 +1,83 @@
+@import "../../../App.scss";
+
+.header-card {
+  display: flex;
+  align-items: center;
+  background-image: url("../../../../img/image\ 1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  width: 100%;
+  height: 150px;
+  position: fixed;
+  top: 0;
+
+  .header__header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 70px;
+    width: 100%;
+
+    a {
+      text-decoration: none;
+    }
+
+    .basket-header__back-button {
+      p {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        text-decoration: none;
+        font-size: 26px;
+        border: 1px solid white;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+          width: 24px;
+          height: 1px;
+          margin-bottom: 35px;
+        }
+
+        &:hover {
+          border-color: $second-color;
+
+          span {
+            color: $second-color;
+          }
+        }
+      }
+    }
+
+    .header__product-basket {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      .header__product-basket-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .header__product-basket-button {
+        width: 50px;
+        height: 50px;
+        background-color: $second-color;
+        border-radius: 50%;
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          background-color: inherit;
+        }
+      }
+    }
+  }
+}

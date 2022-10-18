@@ -1,40 +1,28 @@
-import Header from "../Components/Header/Header";
-import React from "react";
-import { useEffect, useState } from "react";
+import Header from "../Components/Menu/Header/Header";
+import React, { useEffect } from "react";
 import Spinner from "../Components/Spinner/Spinner";
+import { useDispatch, useSelector } from "react-redux";
+import { getProducts } from "../Slices/productSlice";
 
-const Main = React.lazy(() => import("../Components/Main/Main"));
+const Main = React.lazy(() => import("../Components/Menu/Main/Main"));
 
-const Menu = React.memo((props) => {
-  const [menu, setMenu] = useState(null);
+const Menu = React.memo(({ userEmail, setLoggedData }) => {
+  const dispatch = useDispatch(); // хук получения и вызова метода dispatch в редьюсере
+  const menu = useSelector((state) => state.product.product); // хук получения стэйт из стора
 
   useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch(
-        "https://restaurant-small-api.herokuapp.com/"
-      );
-
-      if (response.status === 200) {
-        let result = await response.json();
-        setMenu(result);
-      }
-    };
-
-    fetchData();
-  }, []);
+    dispatch(getProducts()); // получаем и присваеваем массив продуктов
+  }, [dispatch]);
 
   return (
     <>
-      <header>
-        <Header
-          finalSum={props.priceData.finalSum}
-          productAmount={props.priceData.priceValue}
-        />
-      </header>
+      <Header
+        userEmail={userEmail}
+        setLoggedData={setLoggedData}
+      />
+
       <React.Suspense fallback={<Spinner />}>
-        <main className="menu-main-wrapper">
-          <Main menu={menu} setPrice={props.priceData.setPrice} />
-        </main>
+        <Main menu={menu} />
       </React.Suspense>
     </>
   );

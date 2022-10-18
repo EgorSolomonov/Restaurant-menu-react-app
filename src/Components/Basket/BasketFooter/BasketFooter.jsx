@@ -1,32 +1,29 @@
-import { useEffect } from "react";
 import "./BasketFooter.scss";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteAllProds } from "../../../Slices/basketSlice";
+import OrderButton from "../../OrderButton/OrderButton";
 
-const BasketFooter = (props) => {
-  let keys = Object.keys(localStorage);
-
-  useEffect(() => {
-    props.setPrice(JSON.parse(localStorage.getItem(keys)));
-  }, []);
-
-  const clearBasket = () => {
-    localStorage.clear();
-    props.setBasket(JSON.parse(localStorage.getItem(keys)));
-    props.setPrice(JSON.parse(localStorage.getItem("array")));
-  };
+const BasketFooter = () => {
+  let price = useSelector((state) => state.basket.price);
+  const dispatch = useDispatch(); // хук получения и вызова метода dispatch в редьюсере
 
   return (
-    <div className="basket-footer">
-      <div className="basket-footer__order-data">
-        <div className="basket-footer__price-info">
-          <h2>Заказ на сумму:</h2>
-          <p>{props.finalSum} ₽</p>
-        </div>
-        <div className="basket-footer__order-button">
-          <span onClick={clearBasket}>Очистить корзину</span>
-          <span>Оформить заказ</span>
+    <footer>
+      <div className="basket-footer">
+        <div className="basket-footer__order-data">
+          <div className="basket-footer__price-info">
+            <h2>Заказ на сумму:</h2>
+            <p>{price} ₽</p>
+          </div>
+          <div className="basket-footer__order-button">
+            <span className="clear" onClick={() => dispatch(deleteAllProds())}>
+              Очистить корзину
+            </span>
+            <OrderButton />
+          </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

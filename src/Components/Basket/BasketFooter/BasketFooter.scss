@@ -2,6 +2,7 @@
 
 .basket-footer {
   display: flex;
+  background-color: #161516;
 
   height: 90px;
   border-top: 1px solid $second-color;
@@ -14,8 +15,7 @@
 
     .basket-footer__price-info {
       display: flex;
-      align-items: center;
-
+      align-items: flex-end;
       gap: 15px;
 
       h2 {
@@ -36,16 +36,12 @@
       display: flex;
       gap: 10px;
 
-      span {
+      .clear {
         padding: 12px 40px;
         text-decoration: none;
         color: black;
-        background-color: $second-color;
         cursor: pointer;
-
-        &:first-child {
-          background-color: $first-color;
-        }
+        background-color: $first-color;
       }
     }
   }

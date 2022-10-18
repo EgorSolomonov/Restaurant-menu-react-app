@@ -2,7 +2,7 @@ import "./Spinner.scss";
 
 const Spinner = () => {
   return (
-    <>
+    <div className="spinner-wrapper">
       <svg className="spinner" viewBox="0 0 50 50">
         <circle
           className="path"
@@ -13,7 +13,7 @@ const Spinner = () => {
           strokeWidth="5"
         ></circle>
       </svg>
-    </>
+    </div>
   );
 };
 

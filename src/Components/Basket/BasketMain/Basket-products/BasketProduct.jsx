@@ -1,14 +1,18 @@
 import "./BasketProduct.scss";
 import Emptyimg from "../../../../img/Main/empty-img.png";
+import { deleteProd, minusPrice } from "../../../../Slices/basketSlice";
+import { useDispatch } from "react-redux";
 
 const BasketProduct = (props) => {
   const { id, name, price } = props.item;
+  const amount = props.amount;
+  const dispatch = useDispatch(); // хук получения и вызова метода dispatch в редьюсере
 
   return (
     <div className="basket-product-card">
       <div className="basket-product-card__img-container">
         <img
-          src={!props.source ? Emptyimg : props.source}
+          src={!props.item.pictureUrl ? Emptyimg : props.item.pictureUrl}
           alt="product"
           className="basket-product-card__image"
         />
@@ -17,7 +21,12 @@ const BasketProduct = (props) => {
       <div className="basket-product-card__price">
         <p className="amountTag">x{props.amount}</p>
         <p className="priceTag">{price} ₽</p>
-        <span id={id} onClick={props.deleteProdById}>
+        <span
+          onClick={() => {
+            dispatch(deleteProd(id));
+            dispatch(minusPrice({ price, amount }));
+          }}
+        >
           ×
         </span>
       </div>

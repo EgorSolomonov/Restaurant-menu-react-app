@@ -1,0 +1,14 @@
+@import "../../App.scss";
+
+.order-button {
+  display: flex;
+  gap: 10px;
+
+  span {
+    padding: 12px 40px;
+    text-decoration: none;
+    color: black;
+    background-color: $second-color;
+    cursor: pointer;
+  }
+}

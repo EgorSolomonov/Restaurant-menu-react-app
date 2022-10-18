@@ -1,0 +1,72 @@
+@import "../../../App.scss";
+
+.card {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  // gap: 200px;
+  padding: 0 150px;
+
+  @media (max-width: 1380px) {
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
+  img {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 10px solid rgb(70, 69, 69);
+    object-fit: cover;
+
+    @media (max-width: 1380px) {
+      width: 300px;
+      height: 300px;
+      margin-bottom: 50px;
+    }
+  }
+
+  .card__info {
+    display: flex;
+    flex-direction: column;
+
+    .card__name {
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 37px;
+      color: $second-color;
+      width: 520px;
+    }
+
+    .card__description {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      width: 520px;
+      margin-top: 20px;
+    }
+
+    .card__order-info {
+      margin-top: 40px;
+
+      .card__price-info {
+        display: flex;
+        align-items: center;
+        gap: 70px;
+
+        .card__price_price-data {
+          font-weight: 500;
+          font-size: 23px;
+          line-height: 28px;
+        }
+        .card__price_weight-data {
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}

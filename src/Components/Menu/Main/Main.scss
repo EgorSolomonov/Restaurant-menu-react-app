@@ -1,0 +1,15 @@
+.menu-main-wrapper {
+  padding: 0 70px 70px 70px;
+  margin-top: 150px;
+  background-color: #161516;
+
+
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  a {
+    text-decoration: none;
+  }
+}
