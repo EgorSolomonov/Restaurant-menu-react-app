@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import LogoutButton from "../../LogoutButton/LogoutButton";
 import { useSelector } from "react-redux";
 
-const ProductHeader = ({ userEmail }) => {
+const ProductHeader = ({ userEmail, setLoggedData }) => {
   const price = useSelector((state) => state.basket.price);
   const productAmount = useSelector((state) => state.basket.basket);
 
@@ -36,7 +36,7 @@ const ProductHeader = ({ userEmail }) => {
               <img src={Basket} alt="basket" />
             </div>
           </Link>
-          <LogoutButton userEmail={userEmail} />
+          <LogoutButton userEmail={userEmail} setLoggedData={setLoggedData} />
         </div>
       </div>
     </header>

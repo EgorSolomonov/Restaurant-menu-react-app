@@ -72,7 +72,10 @@ const App = () => {
           path="/basket"
           element={
             loggedData?.loggedIn ? (
-              <Basket userEmail={loggedData?.email} />
+              <Basket
+                userEmail={loggedData?.email}
+                setLoggedData={setLoggedData}
+              />
             ) : (
               <Navigate replace to="/basket" />
             )
@@ -83,7 +86,10 @@ const App = () => {
           path="/product/:id"
           element={
             loggedData?.loggedIn ? (
-              <Product userEmail={loggedData.email} />
+              <Product
+                userEmail={loggedData.email}
+                setLoggedData={setLoggedData}
+              />
             ) : (
               <Navigate replace to={`/product/${rememberedProductId}`} />
             )

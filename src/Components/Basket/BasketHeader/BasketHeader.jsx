@@ -2,7 +2,7 @@ import "./BasketHeader.scss";
 import { Link } from "react-router-dom";
 import LogoutButton from "../../LogoutButton/LogoutButton";
 
-const BasketHeader = ({userEmail}) => {
+const BasketHeader = ({ userEmail, setLoggedData }) => {
   return (
     <header>
       <div className="basket-header">
@@ -14,7 +14,7 @@ const BasketHeader = ({userEmail}) => {
           </div>
         </Link>
         <h1 className="basket-header__title">Корзина с выбранными товарами</h1>
-        <LogoutButton userEmail={userEmail} />
+        <LogoutButton userEmail={userEmail} setLoggedData={setLoggedData} />
       </div>
     </header>
   );

@@ -10,7 +10,7 @@ const BasketMain = React.lazy(() =>
   import("../Components/Basket/BasketMain/BasketMain")
 );
 
-const Basket = React.memo(({ userEmail }) => {
+const Basket = React.memo(({ userEmail, setLoggedData }) => {
   const dispatch = useDispatch();
   const uniqueBasket = useSelector((state) => state.basket.uniqueBasket);
   const basket = useSelector((state) => state.basket.basket);
@@ -21,7 +21,7 @@ const Basket = React.memo(({ userEmail }) => {
 
   return (
     <>
-      <BasketHeader userEmail={userEmail} />
+      <BasketHeader userEmail={userEmail} setLoggedData={setLoggedData} />
 
       <React.Suspense fallback={<Spinner />}>
         <BasketMain uniqueBasket={uniqueBasket} />
